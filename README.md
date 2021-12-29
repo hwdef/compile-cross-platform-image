@@ -22,6 +22,7 @@ manifest 具体描述了一个 tag 的镜像信息，通过合理生成 manifest
 
 ### 目录结构
 
+```
 ├── Dockerfile.amd64    Linux amd64 使用的 Dockerfile
 ├── Dockerfile.arm64    Linux arm64 使用的 Dockerfile
 ├── Dockerfile.win      windows amd64 使用的 Dockerfile
@@ -32,9 +33,11 @@ manifest 具体描述了一个 tag 的镜像信息，通过合理生成 manifest
 ├── build.ps1            windows 镜像编译脚本
 ├── go.mod               go 语言依赖文件
 └── main.go              go 语言源码
+```
 
 ### linux 编译脚本使用说明
 
+```
 make    clean                        清理生成的文件
         bin                           编译源码，生成可执行文件
         images                        生成镜像
@@ -42,17 +45,18 @@ make    clean                        清理生成的文件
         release                       将镜像保存为 tar 文件
         create-multi-archimages     创建多架构 manifest
         push-multi-archimages       推送多架构 manifest
+```
 
 ### windows 编译脚本使用说明
 
 此脚本只能在 windows 下运行
-
+```
 ./build.ps1    bin        编译源码，生成可执行文件
                 image      生成镜像
                 push       推送镜像
                 release    将镜像保存为 tar 文件
                 clean      清理生成的文件
-
+```
 ### 多架构多平台可执行文件编译
 
 本仓库用 go 语言举例，通过配置环境变量，分别编译出多个架构的可执行文件，此步骤每个语言都不同，所以不过多赘述，需要根据不同语言自行适配
