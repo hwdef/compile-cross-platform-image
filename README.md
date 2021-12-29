@@ -93,7 +93,7 @@ docker manifest create 主tag 其他架构和平台的tag...
 ```
 
 * 主 tag 应不包括架构和平台信息，例如 `demo:v1.0`
-* 其他架构和平台的 tag 可以是多个 tag，用空格分隔，这些 tag ，需要是已经推送到镜像仓库中的 tag
+* 其他架构和平台的 tag 可以是多个 tag，用空格分隔，这些 tag 需要是已经推送到镜像仓库中的 tag
 * 如果是私有仓库，应加 `--insecure` 参数
 
 推送 manifest
